@@ -28,6 +28,8 @@ npm run build     # genera dist/ (verifica que compila)
 npm run preview
 ```
 
+Despliegue: GitHub Pages vía `.github/workflows/deploy.yml` (push a `main`). `astro.config.mjs` fija `site` y `base: '/magnolia'`; usa `Astro.url`/rutas con `base` para assets nuevos en `public/` (p. ej. `import.meta.env.BASE_URL`).
+
 Checklist antes de terminar: `npm run build` sin errores; sin errores en consola; revisar desktop (≥1024px) y móvil (~390px) (fase 3 usa `applyDesktopAtmosphereCopy` vs `setMobileAtmosphere`); si tocaste el cotizador, mover slider/atmósfera/complementos y enviar el formulario; `prefers-reduced-motion` sigue usable.
 
 ## Convenciones del código
