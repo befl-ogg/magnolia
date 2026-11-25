@@ -1,0 +1,164 @@
+---
+import { Image } from 'astro:assets';
+import mural from '../assets/mural.webp';
+---
+
+  <!-- =========================================================================
+       FASE 1 — SCROLL INICIAL (HERO & REVELACIÓN)
+       ========================================================================= -->
+  <section id="fase-1" class="relative min-h-[155vh] bg-obsidian text-bone">
+    <!-- Sticky Viewport Frame for Smooth Lighting & Transition Scrubbing -->
+    <div id="hero-sticky" class="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-between">
+
+      <!-- Background Architectural Facade & Dynamic Ambient Illumination -->
+      <div id="hero-bg-layer" class="absolute inset-0 z-0 transition-transform duration-150 ease-out will-change-transform">
+        <!-- Base Obsidian Atmosphere -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0C0B0A] via-[#13110F] to-[#171411]"></div>
+
+        <!-- Architectural Silhouette SVG inspired by Magnolia's Brick, Timber Doors & Bronze Plaque -->
+        <svg id="hero-facade-svg" class="absolute inset-0 w-full h-full object-cover opacity-55 transition-opacity duration-300" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <!-- Warm Tungsten Ambient Glows (Controlled dynamically via JS scroll) -->
+            <radialGradient id="tungstenTop" cx="50%" cy="24%" r="52%">
+              <stop offset="0%" stop-color="#E5A963" stop-opacity="0.58"/>
+              <stop offset="45%" stop-color="#C28B4E" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#11100F" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="uplightLeft" cx="26%" cy="82%" r="24%">
+              <stop offset="0%" stop-color="#F1B86E" stop-opacity="0.55"/>
+              <stop offset="60%" stop-color="#A86E34" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#11100F" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="uplightRight" cx="74%" cy="82%" r="24%">
+              <stop offset="0%" stop-color="#F1B86E" stop-opacity="0.55"/>
+              <stop offset="60%" stop-color="#A86E34" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#11100F" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="timberGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3B2718"/>
+              <stop offset="50%" stop-color="#281A10"/>
+              <stop offset="100%" stop-color="#1A110A"/>
+            </linearGradient>
+            <pattern id="brickPattern" width="48" height="22" patternUnits="userSpaceOnUse">
+              <rect width="48" height="22" fill="none"/>
+              <path d="M0 11 H48 M0 22 H48 M24 0 V11 M48 11 V22" stroke="#C2A27A" stroke-opacity="0.09" stroke-width="0.75"/>
+            </pattern>
+          </defs>
+
+          <!-- Night Sky Upper Band -->
+          <rect x="0" y="0" width="1440" height="210" fill="#0F131A" opacity="0.7"/>
+          <!-- Roofline Eave & Corrugated Shadow -->
+          <rect x="0" y="195" width="1440" height="34" fill="#1B1612"/>
+          <line x1="0" y1="229" x2="1440" y2="229" stroke="#C2A27A" stroke-opacity="0.22" stroke-width="1"/>
+
+          <!-- Facade Brick & Plaster Columns -->
+          <rect x="0" y="229" width="1440" height="600" fill="url(#brickPattern)"/>
+          <!-- Architectural Stucco Pilasters -->
+          <rect x="210" y="229" width="24" height="600" fill="#2A241E" opacity="0.65"/>
+          <rect x="572" y="229" width="26" height="600" fill="#2A241E" opacity="0.65"/>
+          <rect x="842" y="229" width="26" height="600" fill="#2A241E" opacity="0.65"/>
+          <rect x="1206" y="229" width="24" height="600" fill="#2A241E" opacity="0.65"/>
+
+          <!-- Left & Right Wrought-Iron Windows with Warm Interior Bokeh -->
+          <g opacity="0.75">
+            <rect x="260" y="285" width="280" height="190" fill="#17120E" stroke="#3D3125" stroke-width="2"/>
+            <circle cx="330" cy="360" r="34" fill="#E8AE68" opacity="0.16"/>
+            <circle cx="445" cy="390" r="42" fill="#E8AE68" opacity="0.14"/>
+            <path d="M295 285 V475 M330 285 V475 M365 285 V475 M400 285 V475 M435 285 V475 M470 285 V475 M505 285 V475" stroke="#0E0C0A" stroke-width="2"/>
+
+            <rect x="900" y="285" width="280" height="190" fill="#17120E" stroke="#3D3125" stroke-width="2"/>
+            <circle cx="980" cy="375" r="36" fill="#E8AE68" opacity="0.15"/>
+            <circle cx="1090" cy="355" r="28" fill="#E8AE68" opacity="0.12"/>
+            <path d="M935 285 V475 M970 285 V475 M1005 285 V475 M1040 285 V475 M1075 285 V475 M1110 285 V475 M1145 285 V475" stroke="#0E0C0A" stroke-width="2"/>
+          </g>
+
+          <!-- Central Monumental Timber & Wrought-Iron Double Doors -->
+          <g>
+            <rect x="598" y="278" width="244" height="550" fill="url(#timberGrad)" stroke="#120E0B" stroke-width="3"/>
+            <line x1="720" y1="278" x2="720" y2="828" stroke="#0B0907" stroke-width="4"/>
+            <!-- Delicate Wrought-Iron Transom Scrollwork -->
+            <rect x="606" y="286" width="228" height="72" fill="#130F0C" stroke="#C2A27A" stroke-opacity="0.22" stroke-width="1"/>
+            <path d="M622 322 C636 298, 668 298, 682 322 C696 346, 708 322, 716 322 M724 322 C732 322, 744 346, 758 322 C772 298, 804 298, 818 322" fill="none" stroke="#C2A27A" stroke-opacity="0.32" stroke-width="1.4"/>
+            <!-- Vertical Timber Planks -->
+            <path d="M638 362 V828 M678 362 V828 M762 362 V828 M802 362 V828" stroke="#150E09" stroke-width="1.5" opacity="0.7"/>
+          </g>
+
+          <!-- Magnolia Bronze Plaque on Right Wall -->
+          <g transform="translate(970, 520)">
+            <rect x="0" y="0" width="176" height="92" rx="2" fill="#141210" stroke="#C2A27A" stroke-opacity="0.45" stroke-width="1"/>
+            <path d="M88 46 C88 46 80 40 80 31 C80 25 88 20 88 20 C88 20 96 25 96 31 C96 40 88 46 88 46Z" fill="none" stroke="#C2A27A" stroke-width="1.1" opacity="0.85"/>
+            <text x="88" y="68" text-anchor="middle" fill="#C2A27A" font-family="Cormorant Garamond, serif" font-size="16" letter-spacing="5" opacity="0.85">MAGNOLIA</text>
+          </g>
+
+          <!-- Festoon String Lights Along Roofline -->
+          <g opacity="0.9">
+            <circle cx="140" cy="242" r="3" fill="#FFE0A3"/>
+            <circle cx="310" cy="246" r="3" fill="#FFE0A3"/>
+            <circle cx="480" cy="242" r="3.2" fill="#FFE0A3"/>
+            <circle cx="650" cy="245" r="3.5" fill="#FFE8B8"/>
+            <circle cx="790" cy="245" r="3.5" fill="#FFE8B8"/>
+            <circle cx="960" cy="242" r="3.2" fill="#FFE0A3"/>
+            <circle cx="1130" cy="246" r="3" fill="#FFE0A3"/>
+            <circle cx="1300" cy="242" r="3" fill="#FFE0A3"/>
+          </g>
+
+          <!-- Dynamic Warm Architectural Lighting Overlays -->
+          <rect id="hero-glow-main" x="0" y="0" width="1440" height="900" fill="url(#tungstenTop)" opacity="0.45"/>
+          <rect id="hero-glow-left" x="0" y="0" width="1440" height="900" fill="url(#uplightLeft)" opacity="0.35"/>
+          <rect id="hero-glow-right" x="0" y="0" width="1440" height="900" fill="url(#uplightRight)" opacity="0.35"/>
+
+          <!-- Sidewalk Ground Plane -->
+          <rect x="0" y="828" width="1440" height="72" fill="#171411"/>
+          <line x1="0" y1="828" x2="1440" y2="828" stroke="#C2A27A" stroke-opacity="0.2" stroke-width="1"/>
+        </svg>
+
+        <!-- Deep Editorial Vignette for High-Contrast Typography -->
+        <div id="hero-vignette" class="absolute inset-0 bg-gradient-to-b from-obsidian/80 via-obsidian/50 to-obsidian/90 transition-opacity duration-300"></div>
+
+        <!-- Subtle Ambient Radial Halo Controlled on Scroll -->
+        <div id="hero-ambient-halo" class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 50% 42%, rgba(214, 158, 92, 0.14) 0%, rgba(17, 16, 15, 0) 62%); opacity: 0.4;"></div>
+      </div>
+
+      <!-- Top Spacer for Header -->
+      <div class="h-20 relative z-10"></div>
+
+      <!-- Center Editorial Typography Block -->
+      <div id="hero-content" class="relative z-10 max-w-5xl mx-auto px-6 sm:px-10 text-center will-change-transform">
+        <div class="overflow-hidden mb-6 sm:mb-8">
+          <p class="hero-line-inner hero-delay-1 text-eyebrow text-bronze font-medium">
+            Chilpancingo · Temporada Inaugural
+          </p>
+        </div>
+
+        <h1 class="font-serif font-light text-fluid-hero text-bone max-w-4xl mx-auto">
+          <span class="block overflow-hidden pb-1">
+            <span class="hero-line-inner hero-delay-2">El escenario que se</span>
+          </span>
+          <span class="block overflow-hidden pb-2">
+            <span class="hero-line-inner hero-delay-3">adapta a tu <em class="italic font-normal text-bronze/95">historia.</em></span>
+          </span>
+        </h1>
+
+        <div class="overflow-hidden mt-7 sm:mt-9">
+          <p class="hero-line-inner hero-delay-4 text-sm sm:text-base text-bone/70 font-light max-w-xl mx-auto leading-relaxed">
+            Arquitectura contemporánea, luz escultórica y privacidad absoluta en un nuevo recinto concebido para trascender el tiempo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Minimal Scroll Indicator -->
+      <div id="hero-scroll-cue" class="relative z-10 pb-8 sm:pb-10 flex flex-col items-center gap-3 transition-opacity duration-300">
+        <span class="text-[10px] tracking-[0.28em] uppercase text-bone/50">Descubrir</span>
+        <div class="w-[1px] h-12 bg-bone/15 overflow-hidden relative">
+          <div class="w-full h-full bg-gradient-to-b from-transparent via-bronze to-transparent scroll-line-pulse"></div>
+        </div>
+      </div>
+
+      <!-- Smooth Crossfade Veil into Phase 2 (Obsidian -> Mural -> Bone) -->
+      <div id="hero-to-bone-veil" class="absolute inset-0 bg-obsidian pointer-events-none z-20 opacity-0">
+        <Image src={mural} alt="Placa en bronce con el emblema de la magnolia y el nombre MAGNOLIA sobre muro de ladrillo aparente, iluminada por una lámpara cálida" widths={[800, 1280, 1920]} sizes="100vw" class="absolute inset-0 w-full h-full object-cover object-center" />
+        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-bone" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+

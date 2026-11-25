@@ -1,0 +1,166 @@
+  <!-- =========================================================================
+       FASE 3 — ARQUITECTURA CAMALEÓNICA (EL NÚCLEO DE VERSATILIDAD)
+       Desktop (>=1024px): Sticky Pinning (400vh) with Continuous Scrubbed Crossfade
+       Mobile (<1024px): No Pinning! Touch-Friendly Tabs + Swipeable Interactive Stage
+       ========================================================================= -->
+  <section id="fase-3" class="relative bg-obsidian text-bone">
+
+    <!-- ==================== DESKTOP STICKY SCROLLYTELLING (>= 1024px) ==================== -->
+    <div id="chameleon-desktop-track" class="hidden lg:block relative h-[400vh]">
+      <div id="chameleon-sticky-stage" class="sticky top-0 h-screen w-full overflow-hidden flex transition-colors duration-700 ease-quiet bg-[#11100F] text-[#F4F1EC]">
+
+        <!-- LEFT 64%: LOCKED-CAMERA ARCHITECTURAL RENDER ENGINE -->
+        <div class="relative w-[64%] h-full overflow-hidden bg-[#12100E]">
+          <!-- Live Locked-Camera Interior SVG (Same Room, 4 Seamless Lighting/Furniture Morphs) -->
+          <div id="desktop-scene-container" class="absolute inset-0 w-full h-full">
+            <!-- Populated cleanly via JS helper so Desktop & Mobile share the exact high-craft architectural render -->
+          </div>
+
+          <!-- Subtle Editorial Corner Stamp -->
+          <div class="absolute top-24 left-10 z-20 flex items-center gap-3 px-4 py-2 bg-obsidian/45 backdrop-blur-md border border-bone/15 rounded-sm text-bone">
+            <span class="w-1.5 h-1.5 rounded-full bg-bronze animate-pulse"></span>
+            <span id="desktop-scene-kelvin" class="text-[10px] tracking-[0.22em] uppercase">2700K · Iluminación Nocturna Cálida</span>
+          </div>
+
+          <!-- Subtle Bottom Caption -->
+          <div class="absolute bottom-8 left-10 right-10 z-20 flex items-center justify-between text-[11px] tracking-[0.2em] uppercase text-bone/65">
+            <span>Misma Arquitectura · Cuatro Identidades</span>
+            <span id="desktop-scene-capacity">Aforo sugerido: 80 – 220 invitados</span>
+          </div>
+        </div>
+
+        <!-- RIGHT 36%: ADAPTIVE EDITORIAL NARRATIVE PANEL -->
+        <div class="relative w-[36%] h-full flex flex-col justify-between px-12 xl:px-16 pt-28 pb-12 border-l border-current/10">
+          <!-- Top Eyebrow & Step Counter -->
+          <div class="flex items-center justify-between">
+            <p class="text-eyebrow opacity-65">02 / Arquitectura Camaleónica</p>
+            <div class="font-serif text-lg tracking-widest">
+              <span id="desktop-step-num" class="text-bronze">01</span>
+              <span class="opacity-35 mx-1">/</span>
+              <span class="opacity-45">04</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Narrative Copy with Crossfade -->
+          <div class="my-auto py-8">
+            <p id="desktop-atmo-tag" class="text-eyebrow text-bronze mb-4 transition-all duration-500">Bodas & Galas</p>
+            <h2 id="desktop-atmo-title" class="font-serif font-light text-4xl xl:text-5xl leading-[1.08] mb-6 transition-all duration-500">
+              Romance bajo luz dorada.
+            </h2>
+            <p id="desktop-atmo-desc" class="text-base font-light leading-relaxed opacity-75 mb-8 transition-all duration-500">
+              Cenas largas a la luz de las velas, reflejos ámbar sobre el concreto pulido y guirnaldas cálidas que abrazan el arco monumental.
+            </p>
+
+            <!-- Attribute Pills -->
+            <div id="desktop-atmo-specs" class="flex flex-wrap gap-2 mb-9">
+              <!-- Dynamically rendered specs -->
+            </div>
+
+            <!-- Contextual Pre-fill CTA -->
+            <button type="button" id="desktop-atmo-cta" class="inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase border-b border-bronze pb-1.5 text-bronze hover:opacity-75 transition-opacity">
+              <span>Cotizar esta atmósfera</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <!-- Interactive Progress Rail (Clickable to Jump Directly to Atmosphere) -->
+          <div class="space-y-3">
+            <div class="grid grid-cols-4 gap-2" role="tablist" aria-label="Selector de atmósferas">
+              <button type="button" data-jump-step="0" class="desktop-step-btn text-left py-2 border-t-2 border-bronze transition-all duration-300 opacity-100">
+                <span class="block text-[10px] tracking-[0.18em] uppercase opacity-60">01</span>
+                <span class="block text-xs font-medium truncate mt-0.5">Bodas</span>
+              </button>
+              <button type="button" data-jump-step="1" class="desktop-step-btn text-left py-2 border-t-2 border-current/20 transition-all duration-300 opacity-45 hover:opacity-80">
+                <span class="block text-[10px] tracking-[0.18em] uppercase opacity-60">02</span>
+                <span class="block text-xs font-medium truncate mt-0.5">Corporativo</span>
+              </button>
+              <button type="button" data-jump-step="2" class="desktop-step-btn text-left py-2 border-t-2 border-current/20 transition-all duration-300 opacity-45 hover:opacity-80">
+                <span class="block text-[10px] tracking-[0.18em] uppercase opacity-60">03</span>
+                <span class="block text-xs font-medium truncate mt-0.5">Bazares</span>
+              </button>
+              <button type="button" data-jump-step="3" class="desktop-step-btn text-left py-2 border-t-2 border-current/20 transition-all duration-300 opacity-45 hover:opacity-80">
+                <span class="block text-[10px] tracking-[0.18em] uppercase opacity-60">04</span>
+                <span class="block text-xs font-medium truncate mt-0.5">Privados</span>
+              </button>
+            </div>
+            <!-- Continuous Scroll Progress Micro-Bar -->
+            <div class="w-full h-[1px] bg-current/15 overflow-hidden">
+              <div id="desktop-scroll-bar" class="h-full bg-bronze w-1/4 transition-transform duration-100 origin-left"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== MOBILE & TABLET INTERACTIVE EXPERIENCE (< 1024px) ==================== -->
+    <div id="chameleon-mobile" class="lg:hidden py-20 sm:py-28 px-5 sm:px-10 transition-colors duration-700 ease-quiet bg-[#11100F] text-[#F4F1EC]">
+      <div class="max-w-3xl mx-auto">
+        <div class="mb-8 reveal-up">
+          <p class="text-eyebrow text-bronze mb-4">02 / Arquitectura Camaleónica</p>
+          <h2 class="font-serif font-light text-fluid-h2">
+            Un mismo lienzo, <em class="italic font-normal">cuatro atmósferas.</em>
+          </h2>
+          <p class="mt-3 text-sm opacity-70 font-light">
+            Toca una pestaña o desliza la imagen para explorar cómo se transforma la iluminación y configuración de Magnolia.
+          </p>
+        </div>
+
+        <!-- Touch-Optimized Horizontal Tab Strip (min-height 48px) -->
+        <div class="flex gap-2 overflow-x-auto no-scrollbar pb-3 mb-6 border-b border-current/15" role="tablist" aria-label="Atmósferas de Magnolia">
+          <button type="button" data-mobile-step="0" class="mobile-tab-btn shrink-0 min-h-[48px] px-4 text-xs tracking-[0.16em] uppercase border-b-2 border-bronze text-bronze font-medium transition-all">
+            01 · Bodas & Galas
+          </button>
+          <button type="button" data-mobile-step="1" class="mobile-tab-btn shrink-0 min-h-[48px] px-4 text-xs tracking-[0.16em] uppercase border-b-2 border-transparent opacity-60 transition-all">
+            02 · Corporativo
+          </button>
+          <button type="button" data-mobile-step="2" class="mobile-tab-btn shrink-0 min-h-[48px] px-4 text-xs tracking-[0.16em] uppercase border-b-2 border-transparent opacity-60 transition-all">
+            03 · Bazares
+          </button>
+          <button type="button" data-mobile-step="3" class="mobile-tab-btn shrink-0 min-h-[48px] px-4 text-xs tracking-[0.16em] uppercase border-b-2 border-transparent opacity-60 transition-all">
+            04 · Privados
+          </button>
+        </div>
+
+        <!-- Touch Swipeable Architectural Stage (4:5 Mobile / 16:10 Tablet) -->
+        <div id="mobile-swipe-stage" class="relative aspect-[4/5] sm:aspect-[16/10] w-full rounded-sm overflow-hidden bg-[#12100E] shadow-2xl touch-pan-y select-none">
+          <div id="mobile-scene-container" class="absolute inset-0 w-full h-full"></div>
+
+          <!-- Atmospheric Lighting Tag -->
+          <div class="absolute top-4 left-4 z-20 px-3 py-1.5 bg-obsidian/55 backdrop-blur-md border border-bone/15 rounded-sm text-bone text-[10px] tracking-[0.18em] uppercase">
+            <span id="mobile-scene-kelvin">2700K · Cálido Nocturno</span>
+          </div>
+
+          <!-- Left / Right Touch Arrows for Effortless Mobile Navigation -->
+          <div class="absolute bottom-4 right-4 z-20 flex items-center gap-2">
+            <button type="button" id="mobile-prev-btn" aria-label="Atmósfera anterior" class="w-12 h-12 rounded-full bg-obsidian/65 backdrop-blur-md border border-bone/20 text-bone flex items-center justify-center active:scale-95 transition-transform">
+              ←
+            </button>
+            <button type="button" id="mobile-next-btn" aria-label="Siguiente atmósfera" class="w-12 h-12 rounded-full bg-obsidian/65 backdrop-blur-md border border-bone/20 text-bone flex items-center justify-center active:scale-95 transition-transform">
+              →
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Narrative Block -->
+        <div class="mt-7 pt-6 border-t border-current/15">
+          <div class="flex items-center justify-between mb-3">
+            <span id="mobile-atmo-tag" class="text-eyebrow text-bronze">Bodas & Galas</span>
+            <span id="mobile-scene-capacity" class="text-xs opacity-60">80 – 220 invitados</span>
+          </div>
+          <h3 id="mobile-atmo-title" class="font-serif text-fluid-h3 font-light mb-3">
+            Romance bajo luz dorada.
+          </h3>
+          <p id="mobile-atmo-desc" class="text-sm sm:text-base font-light opacity-75 leading-relaxed mb-6">
+            Cenas largas a la luz de las velas, reflejos ámbar sobre el concreto pulido y guirnaldas cálidas que abrazan el arco monumental.
+          </p>
+          <div id="mobile-atmo-specs" class="flex flex-wrap gap-2 mb-6"></div>
+          <button type="button" id="mobile-atmo-cta" class="min-h-[48px] inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-bronze border-b border-bronze pb-1">
+            <span>Cotizar esta atmósfera</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
